@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+    # nginx is an http server
+    http:
+        build: http_server
+        volumes:
+            - ./http_server/nginx.conf:/etc/nginx/nginx.conf
+            - ./http_server/nginx_conf.d:/etc/nginx/conf.d
+        ports:
+            - 4443:443
+            - 4080:80
+
+    # uWSGI runs the flask webserver
+#    web:
+#        build: webapp
