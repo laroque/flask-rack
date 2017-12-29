@@ -2,6 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 app.debug = True
+app.config.update(APPLICATION_ROOT="/hipflask")
 
 import hipflask.views
 
