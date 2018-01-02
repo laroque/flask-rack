@@ -5,7 +5,8 @@ COPY setup.py /usr/local/src/setup.py
 
 RUN pip install -e /usr/local/src
 
-ENV FLASK_APP hipflask
-ENV FLASK_DEBUG true
+RUN pip install uwsgi
 
-CMD ["flask","run","--host=0.0.0.0"]
+COPY hipflask_uwsgi.yaml /usr/local/etc/hipflask_uwsgi.yaml
+
+CMD ["/usr/local/bin/uwsgi", "--yaml", "/usr/local/etc/hipflask_uwsgi.yaml"]

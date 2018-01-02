@@ -14,5 +14,3 @@ services:
     # uWSGI runs the flask webserver
     web:
         build: flask
-        #ports:
-        #    - 5000:5000
