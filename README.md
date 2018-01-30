@@ -1,5 +1,5 @@
 # flask-rack
-Containerizing a generic flask application with one service per container.
+Containerizing a generic flask application with one service per container...
 
 ## Quick Start
 It shold be fine to clone this repo and just spin everything up with `docker-compose up` (adding whatever options you want).
